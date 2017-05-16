@@ -62,8 +62,14 @@ let app = new Vue({
 
     // 生命周期函数
     mounted: function () {
-        document.onkeyup = (function () {
-
+        document.onkeyup = (function (e) {
+            if (this.moveInfo.index != null && e.keyCode === 8) {
+                this.notes.splice(this.moveInfo.index, 1);
+                this.moveInfo.index =
+                    this.notes.length ?
+                        this.notes.length - 1 : null;
+                this.save();
+            }
         }).bind(this);
         if (localStorage.notes) {
             this.notes = JSON.parse(localStorage.notes);

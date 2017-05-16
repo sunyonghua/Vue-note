@@ -22,7 +22,7 @@
              :key="v.id">
             <h3 class="title" @mousedown.prevent.stop="mousedown(i,$event)" >
                 {{v.title}}
-                <span class="iconfont icon-iconfont05" v-on:click.prevent="deleteNote(i,$event)"></span>
+                <span class="iconfont icon-iconfont05" @click.prevent.stop="deleteNote(i,$event)"></span>
             </h3>
             <div class="main">
                 <textarea v-model="v.content" @change="save">{{v.content}}</textarea>
