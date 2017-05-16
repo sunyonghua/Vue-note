@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+}
+
+#noteBox {
+    width: 100%;
+    height: 100%;
+    background: #f2f2f2;
+}
+
+.header {
+    width: 100%;
+    height: 48px;
+    background: #5e5e5e;
+    padding: 0 50px;
+    color: #fff;
+    font-size: 30px;
+    line-height: 48px;
+}
+
+.content {
+    position: relative;
+    width: 100%;
+    height: 80%;
+}
+
+.note {
+    position: absolute;
+    top: 100px;
+    left: 200px;
+    width: 240px;
+    height: auto;
+    border: 1px solid #ff9a5d;
+    border-radius: 3px;
+    background: #fff;
+    overflow: hidden;
+}
+
+.note.active {
+    z-index: 11111111111;
+    box-shadow: 1px 2px 30px rgba(0, 0, 0, 0.2);
+}
+
+.note .title {
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: #fff;
+    position: relative;
+}
+
+.note .title span {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50px;
+    height: 40px;
+    font-size: 20px;
+    text-align: center;
+    line-height: 40px;
+}
+
+/*便签有red类名时颜色为#ff9a5d*/
+.note.red {
+    border: 1px solid #ff9a5d;
+}
+
+.note.red .title {
+    background: #ff9a5d;
+}
+
+/*便签有orange类名时颜色为#ffd358*/
+.note.orange {
+    border: 1px solid #ffd358;
+}
+
+.note.orange .title {
+    background: #ffd358;
+}
+
+/*便签有green时类名颜色为#86fc50*/
+.note.green {
+    border: 1px solid #86fc50;
+}
+
+.note.green .title {
+    background: #88ff51;
+}
+
+/*便签有blue类名时颜色为#6495ed*/
+.note.blue {
+    border: 1px solid #6495ed;
+}
+
+.note.blue .title {
+    background: cornflowerblue;
+}
+
+.note .main {
+    width: 100%;
+    height: auto;
+    padding: 15px;
+    color: #454545;
+}
+
+.note .main textarea {
+    min-height: 200px;
+    width: 100%;
+    border: none;
+    outline: none;
+    resize: none;
+}
